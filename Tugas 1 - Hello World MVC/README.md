@@ -1,7 +1,7 @@
 # Pemrograman Berbasis Kerangka Kerja
 ## Tugas 1 - Hello World
 
-     *Naufal Pranasetyo Fodensi*
+     Naufal Pranasetyo Fodensi
      05111540000057
      PBKK Kelas G
 ---

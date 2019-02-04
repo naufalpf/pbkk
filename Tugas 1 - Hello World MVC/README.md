@@ -13,4 +13,4 @@
 6. Buka browser dan ketik alamat `localhost:3000` untuk melihat hasilnya
 7. Hasilnya ialah seperti ini:
 
-![hasil](/Tugas%201%20-%20Hello%20World//hasil.png)
+![hasil](/Tugas%201%20-%20Hello%20World%20MVC//hasil.png)

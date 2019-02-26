@@ -1,0 +1,54 @@
+{
+  "name": "naufalpf",
+  "version": "0.0.7-beta",
+  "author": "Equan Pr.",
+  "description": "Simple file server for html-javascript web client app development",
+  "keywords": [
+    "process",
+    "reload",
+    "watch",
+    "development",
+    "restart",
+    "server",
+    "monitor",
+    "auto",
+    "static",
+    "nodemon"
+  ],
+  "homepage": "https://github.com/junwatu/svh",
+  "bugs": {
+    "url": "https://github.com/junwatu/svh/issues"
+  },
+  "main": "./lib/core.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "chalk": "0.2.x",
+    "cheerio": "0.12.x",
+    "commander": "2.0.x",
+    "compression": "^1.0.2",
+    "concat-stream": "1.0.x",
+    "express": "4.x",
+    "morgan": "^1.1.1",
+    "send": "^0.3.0",
+    "watch": "0.8.x",
+    "wordgenerator": "0.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-uglifyjs": "^0.3.0",
+    "gulp-util": "2.2.14",
+    "mocha": "1.13.x",
+    "supertest": "0.8.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/junwatu/svh.git"
+  },
+  "bin": {
+    "svh": "./bin/svh"
+  },
+  "license": "MIT"
+}

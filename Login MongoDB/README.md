@@ -1,9 +1,12 @@
 # Pemrograman Berbasis Kerangka Kerja
 ## Tugas 2 - Offline First
-
-    ### Naufal Pranasetyo 
+   
+   ### Naufal Pranasetyo 
+   ### Muh
     ### Muhammad Akram 
     ### Hilmi Raditya
+    
+    
     
 1. Clone repositori ini, lalu buka terminal
 2. Masuk ke folder dari repositori yang sudah di clone 

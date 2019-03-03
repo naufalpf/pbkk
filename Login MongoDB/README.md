@@ -4,7 +4,7 @@
     ### Naufal Pranasetyo 
     ### Muhammad Akram 
     ### Hilmi Raditya
----
+    
 1. Clone repositori ini, lalu buka terminal
 2. Masuk ke folder dari repositori yang sudah di clone 
 3. Jalankan `npm install` untuk download dependencies 

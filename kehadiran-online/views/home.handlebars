@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../admin-lte/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../admin-lte/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../admin-lte/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../admin-lte/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <a href="#" class="logo">
+      <span class="logo-mini"><b>T</b>P</span>
+      <span class="logo-lg"><b>Tugas</b> PBKK</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="hidden-xs">{{ nrp }}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src="../admin.png" class="img-circle" alt="User Image">
+                <p>
+                  {{ nrp }}
+                </p>
+              </li>
+              <li class="user-footer">
+                <div align="center">
+                  <a href="/logout" class="btn btn-default btn-flat">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">NAVIGASI</li>
+        <li><a href="../home"><i class="fa fa-book"></i> <span>Home</span></a></li>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>
+          Home      </h1>
+      <br><br>
+      <div class="row">
+              <div class="col-md-12">
+        <div class="callout callout-info">
+            <h4>Selamat Datang, {{ nrp }} !</h4>
+            Anda berhasil Login
+        </div>
+    </div>
+      </div>
+    </section>
+  </div>
+  <footer class="main-footer">
+    <strong>Tugas PBKK</strong>
+  </footer>
+</div>
+<script src="../admin-lte/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../admin-lte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../admin-lte/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../admin-lte/dist/js/adminlte.min.js"></script>
+<script src="../admin-lte/dist/js/demo.js"></script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+</body>
+</html>
+

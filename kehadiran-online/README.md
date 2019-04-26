@@ -19,5 +19,8 @@ Tools yang digunakan:
 5. Buka browser menuju ke halaman http://localhost:8000
 6. Buka terminal untuk melihat log saat gagal dan berhasil login
 
+Halaman Register dan Login
 ![register](register.png)
+
+Halaman Sukses Login
 ![login](login.png)

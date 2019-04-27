@@ -7,9 +7,9 @@ var app = express();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const url = 'mongodb://localhost:27017';
-const dbName = 'tugas4pbkk';
+const dbName = 'absensi';
 
-app.use(session({secret: 'pbkk4' ,saveUninitialized: true,resave: true}));
+app.use(session({secret: 'absensi' ,saveUninitialized: true,resave: true}));
 app.use(bodyParser.json());      
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded())

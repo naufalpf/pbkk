@@ -1,16 +1,11 @@
 # Pemrograman Berbasis Kerangka Kerja
-## Naufal Pranasetyo
----
-1. Clone repositori ini, lalu buka terminal
-2. Masuk ke folder dari repositori yang sudah di clone 
-3. Jalankan `npm install` untuk download dependencies 
-4. Jalankan `npm start` untuk memulai aplikasinya
-5. Buka browser dan ketik alamat `localhost:3000` untuk melihat hasilnya
-6. Hasilnya ialah seperti ini:
+## Kelompok 5
+## Tugas Sistem Kehadiran Online
+   
+   - **Hilmi Raditya       05111640000164**
+   - **Naufal Pranasetyo   05111540000057**
+   - **Muhammad Akram A.   05111540000050**
 
-<<<<<<< HEAD
-![hasil](/Tugas%201%20-%20Hello%20World%20MVC//hasil.png)
-=======
 Tools yang digunakan: 
 - [expressJS](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/) 
@@ -27,4 +22,4 @@ Tools yang digunakan:
 Desain Database
 
 ![db](Desain%20Database.png)
->>>>>>> master
+

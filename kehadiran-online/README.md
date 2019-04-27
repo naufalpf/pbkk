@@ -8,7 +8,7 @@
 
 Tools yang digunakan: 
 - [expressJS](https://expressjs.com/)
-- [Mongo DB](https://www.mongodb.com/) 
+- [MongoDB](https://www.mongodb.com/) 
 - [Template Engine hbs](https://github.com/pillarjs/hbs)
    
 ## Cara Menjalankan:
@@ -19,8 +19,6 @@ Tools yang digunakan:
 5. Buka browser menuju ke halaman http://localhost:8000
 6. Buka terminal untuk melihat log saat gagal dan berhasil login
 
-Halaman Register dan Login
-![register](register.png)
+Desain Database
 
-Halaman Sukses Login
-![login](login.png)
+![db](Desain%20Database.png)

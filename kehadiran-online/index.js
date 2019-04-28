@@ -4,12 +4,14 @@ var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 var app = express();
+var cookieParser = require('cookie-parser')
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const url = 'mongodb://localhost:27017';
 const dbName = 'absensi';
 
 app.use(session({secret: 'absensi' ,saveUninitialized: true,resave: true}));
+app.use(cookieParser())
 app.use(bodyParser.json());      
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded())
@@ -49,6 +51,7 @@ app.post('/login', function (req, res) {
         console.log('sukses login');
         sess = req.session;
         sess.nrp = req.body.nrp;
+        res.cookie('NRP_SESSION',req.body.nrp, { maxAge: 900000, httpOnly: true });
         MongoClient.connect(url, function(err, db) {
           if (err) throw err;
           var dbo = db.db(dbName);
@@ -105,6 +108,7 @@ app.get('/home', function (req, res) {
 });
 
 app.get('/logout', function (req, res) {
+  res.clearCookie('NRP_SESSION');
   req.session.destroy((err) => {
     if(err) {
         return console.log(err);

@@ -4,12 +4,13 @@ var multer = require('multer');
 var upload = multer();
 var app = express();
 
-app.get('/', function(req, res){
-   res.render('form');
+app.get('/image', function(req, res){
+   res.render('index.pug');
 });
 
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.use('/static', express.static('public'));
 
 // for parsing application/json
 app.use(bodyParser.json()); 
@@ -22,9 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(upload.array()); 
 app.use(express.static('public'));
 
-app.post('/', function(req, res){
-   console.log(req.body);
-   res.send("recieved your request!");
-});
+
+
 app.listen(3000);
-console.log('localhost:3000');
+console.log('buka browser ke localhost:3000/image')

@@ -58,3 +58,6 @@ app.get('/cookie', function(req, res){
     }
  });
 app.listen(3000);
+console.log('Buka localhost:3000/cookie');
+console.log('Buka localhost:3000/clear_cookie_foo untuk delete cookie');
+console.log('Buka localhost:3000/sessions untuk session dan refresh')

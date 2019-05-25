@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-dark">
+    <thead>
+        <tr>
+        <th scope="col">Matakuliah ID</th>
+        <th scope="col">NRP</th>
+        <th scope="col">Semester</th>
+        <th scope="col">Pertemuan</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each hasil}}
+            <tr>
+                <td>{{mataKuliahId}}</td>
+                <td>{{userRegisterNumber}}</td>
+                <td>{{semester}}</td>
+                <td>{{pertemuanKe}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+    </table>
+</div>

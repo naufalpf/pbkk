@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}PBKK Template Engine Swig</title>
+
+
+</head>
+<body>
+
+    <header>
+        <h1>{% block title %}PBKK{% endblock %}</h1>
+        {% block header %}{% endblock %}
+        <nav>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/people">Anggota PBKK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section role="main">
+        {% block body %}{% endblock %}
+    </section>
+
+</body>
+</html>

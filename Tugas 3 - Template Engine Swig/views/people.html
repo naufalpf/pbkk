@@ -1,0 +1,17 @@
+<!doctype html>
+
+<html>
+{% extends 'layout.html' %}
+
+{% block title %}Anggota PBKK{% endblock %}
+
+{% block body %}
+<ul>
+    {% for person in people %}
+    <li><a href="/people/">{{ person.name }}</a> NRP {{ person.NRP }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+</html>
+

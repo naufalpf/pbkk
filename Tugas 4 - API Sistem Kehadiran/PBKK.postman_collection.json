@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "23d59019-5a68-4c09-bebc-05c79e44a8c3",
+		"name": "PBKK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mahasiswa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/mahasiswa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"mahasiswa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "matakuliah",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://9884449c.ngrok.io/mahasiswa",
+					"protocol": "http",
+					"host": [
+						"9884449c",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"mahasiswa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah mhs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nrp",
+							"value": "05111540000057",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Nirmala",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "nirmala",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://d6a64457.ngrok.io/tambahmahasiswa",
+					"protocol": "http",
+					"host": [
+						"d6a64457",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"tambahmahasiswa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah matkul",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode_matkul",
+							"value": "IF1001",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Tugas Akhir",
+							"type": "text"
+						},
+						{
+							"key": "semester",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "kelas",
+							"value": " A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/tambahmatkul",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tambahmatkul"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah peserta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nrp",
+							"value": "05111540000057",
+							"type": "text"
+						},
+						{
+							"key": "kode_matkul",
+							"value": "IF1001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/tambahpesertakelas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tambahpesertakelas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah jadwal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode_matkul",
+							"value": "IF1001",
+							"type": "text"
+						},
+						{
+							"key": "pertemuan",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "ruangan",
+							"value": "if108",
+							"type": "text"
+						},
+						{
+							"key": "jam_mulai",
+							"value": "2019-05-22 00:00:00",
+							"type": "text"
+						},
+						{
+							"key": "jam_selesai",
+							"value": "2019-05-29 00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/tambahjadwal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tambahjadwal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post absen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d4af15bd-3f5b-44c7-92de-67191659cb4d",
+						"exec": [
+							"tests[\"response code is 200\"] = responseCode.code === 200;",
+							"tests[\"body contains authenticated\"] = responseBody.has(\"authenticated\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "postman",
+							"type": "string"
+						},
+						{
+							"key": "realm",
+							"value": "{{echo_digest_realm}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "nonce",
+							"value": "{{echo_digest_nonce}}",
+							"type": "string"
+						},
+						{
+							"key": "nonceCount",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientNonce",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "opaque",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "qop",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "disableRetryRequest",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Digest username=\"postman\", realm=\"Users\", nonce=\"ni1LiL0O37PRRhofWdCLmwFsnEtH1lew\", uri=\"/digest-auth\", response=\"254679099562cf07df9b6f5d8d15db44\", opaque=\"\""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nrp",
+							"value": "05111540000057",
+							"type": "text"
+						},
+						{
+							"key": "ruangan",
+							"value": "if108",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/absen/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"absen",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								},
+								{
+									"key": "realm",
+									"value": "{{echo_digest_realm}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "nonce",
+									"value": "{{echo_digest_nonce}}",
+									"type": "string"
+								},
+								{
+									"key": "nonceCount",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "clientNonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "opaque",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "qop",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "disableRetryRequest",
+									"type": "any"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Digest username=\"postman\", realm=\"Users\", nonce=\"ni1LiL0O37PRRhofWdCLmwFsnEtH1lew\", uri=\"/digest-auth\", response=\"254679099562cf07df9b6f5d8d15db44\", opaque=\"\""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nrp",
+									"value": "05111540000057",
+									"type": "text"
+								},
+								{
+									"key": "ruangan",
+									"value": "if108",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/absen/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absen",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "",
+							"name": "Access-Control-Allow-Credentials",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "",
+							"name": "Access-Control-Allow-Headers",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "",
+							"name": "Access-Control-Allow-Methods",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "42",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Oct 2015 06:17:51 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.6.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.org>",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"authenticated\":true}"
+				}
+			]
+		},
+		{
+			"name": "rekap per matkul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/rekap/IF1001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rekap",
+						"IF1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rekap matkul pertemuan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/rekap/if1001/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rekap",
+						"if1001",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rekap mhs per matkul",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/rekapmahasiswa/05111540000057/IF1001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rekapmahasiswa",
+						"05111540000057",
+						"IF1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rekap mhs per semester",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/rekapmahasiswasemester/5111540000057/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rekapmahasiswasemester",
+						"5111540000057",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

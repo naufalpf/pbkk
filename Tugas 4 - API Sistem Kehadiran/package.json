@@ -1,0 +1,32 @@
+{
+  "name": "tugas4pbkk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "Validator": "^1.0.8",
+    "admin-lte": "^2.4.10",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "handlebars": "^4.1.2",
+    "install-timestamp": "^1.0.0",
+    "migrate-mongo": "^5.0.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.3",
+    "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "time-stamp": "^2.2.0"
+  },
+  "devDependencies": {
+    "validator": "^11.0.0"
+  }
+}
